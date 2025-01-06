@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web de rap y graffiti para subir canciones de PEL1GRO">
+    <title>PEL1GRO Rap & Graffiti</title>
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #1d1d1d, #2c2c2c);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(255, 0, 0, 0.6));
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 4rem;
+            text-align: center;
+            color: #ff5733;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header .logo h1:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5733;
+            text-shadow: 0 0 10px rgba(255, 87, 51, 0.8);
+        }
+
+        .banner {
+            background: url('graffiti-background.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .banner h2 {
+            font-family: 'Impact', sans-serif;
+            font-size: 4rem;
+            color: white;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .banner p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-family: 'Impact', sans-serif;
+            color: #ff5733;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .song-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .song {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            border: 2px solid #ff5733;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .song:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        form input, form button {
+            background-color: #333;
+            color: white;
+            border: 2px solid #ff5733;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        form input[type="file"] {
+            background-color: #444;
+        }
+
+        form button {
+            background-color: #ff5733;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #c92a00;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ff5733;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>PEL1GRO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre PEL1GRO</a></li>
+                <li><a href="#songs">Canciones</a></li>
+                <li><a href="#upload">Subir Canción</a></li>
+                <li><a href="#settings">Ajustes</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <h2>Bienvenidos al mundo de PEL1GRO</h2>
+            <p>Escucha lo más reciente y sube tus temas de rap.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre PEL1GRO</h2>
+        <p>PEL1GRO es un artista de rap que fusiona el graffiti y el rap para contar historias auténticas de la calle.</p>
+    </section>
+
+    <section id="songs">
+        <h2>Canciones</h2>
+        <div class="song-list">
+            <!-- Canciones dinámicas -->
+        </div>
+    </section>
+
+    <section id="upload">
+        <h2>Sube tu Canción</h2>
+        <form onsubmit="return validateUpload()">
+            <label for="songTitle">Título de la Canción:</label>
+            <input type="text" id="songTitle" name="songTitle" required>
+
+            <label for="songFile">Archivo de la Canción (MP3):</label>
+            <input type="file" id="songFile" name="songFile" accept=".mp3" required>
+
+            <label for="uploadPassword">Contraseña:</label>
+            <input type="password" id="uploadPassword" name="uploadPassword" required>
+
+            <button type="submit">Subir Canción</button>
+        </form>
+    </section>
+
+    <section id="settings">
+        <h2>Ajustes</h2>
+        <form>
+            <label for="email">Email de contacto:</label>
+            <input type="email" id="email" placeholder="Ingresa un nuevo correo">
+
+            <label for="phone">Número de teléfono:</label>
+            <input type="tel" id="phone" placeholder="Ingresa un nuevo número">
+
+            <label for="newPassword">Nueva contraseña para subir canciones:</label>
+            <input type="password" id="newPassword" placeholder="Ingresa una nueva contraseña">
+
+            <button type="button" onclick="updateSettings()">Guardar Ajustes</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Email: <span id="contactEmail">contacto@pel1gro.com</span></p>
+        <p>Teléfono: <span id="contactPhone">+123456789</span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PEL1GRO. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const emailSpan = document.getElementById('contactEmail');
+        const phoneSpan = document.getElementById('contactPhone');
+        let uploadPassword = localStorage.getItem('uploadPassword') || 'PEL1GRO123';
+
+        function validateUpload() {
+            const inputPassword = document.getElementById('uploadPassword').value;
+            if (inputPassword !== uploadPassword) {
+                alert('Contraseña incorrecta. No puedes subir canciones.');
+                return false;
+            }
+            alert('Canción subida exitosamente.');
+            return true;
+        }
+
+        function updateSettings() {
+            const newEmail = document.getElementById('email').value;
+            const newPhone = document.getElementById('phone').value;
+            const newPassword = document.getElementById('newPassword').value;
+
+if (newEmail) {
+    emailSpan.textContent = newEmail;
+    localStorage.setItem('contactEmail', newEmail);
+    alert('Email actualizado.');
+}
+
+if (newPhone) {
+    phoneSpan.textContent = newPhone;
+    localStorage.setItem('contactPhone', newPhone);
+    alert('Número de teléfono actualizado.');
+}
+
+if (newPassword) {
+    uploadPassword = newPassword;
+    localStorage.setItem('uploadPassword', newPassword);
+    alert('Contraseña actualizada.');
+}
+}
+
+// Cargar configuraciones guardadas
+window.onload = () => {
+const savedEmail = localStorage.getItem('contactEmail');
+const savedPhone = localStorage.getItem('contactPhone');
+const newPassword = document.getElementById('newPassword').value;
+
+if (newEmail) {
+    emailSpan.textContent = newEmail;
+    localStorage.setItem('contactEmail', newEmail);
+    alert('Email actualizado.');
+}
+
+if (newPhone) {
+    phoneSpan.textContent = newPhone;
+    localStorage.setItem('contactPhone', newPhone);
+    alert('Número de teléfono actualizado.');
+}
+
+if (newPassword) {
+    uploadPassword = newPassword;
+    localStorage.setItem('uploadPassword', newPassword);
+    alert('Contraseña actualizada.');
+}
+}
+
+// Cargar configuraciones guardadas
+window.onload = () => {
+const savedEmail = localStorage.getItem('contactEmail');
+const savedPhone = localStorage.getItem('contactPhone');
+const savedPassword = localStorage.getItem('uploadPassword');
+
+if (savedEmail) {
+    emailSpan.textContent = savedEmail;
+}
+
+if (savedPhone) {
+    phoneSpan.textContent = savedPhone;
+}
+
+if (savedPassword) {
+    uploadPassword = savedPassword;
+}
+};
+</script>
+</body>
+</html>
+
+
